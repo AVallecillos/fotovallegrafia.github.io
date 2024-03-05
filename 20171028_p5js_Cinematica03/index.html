@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Botón</title>
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="code.js"></script>
+	</head>
+	<body link="black" style="text-align:center; margin:0px; background-color:white; font-family:sans-serif; font-size:12px; width:500px; margin-left:auto; margin-right:auto;">
+  	<h1 style="font-size:24px; text-align:center; color:grey;">CINEMÁTICA</h1>
+		<p style="text-align:justify; color:grey;">Cinemática es una aplicación orientada al estudio del movimiento de un objeto en lanzamiento libre. Puedes descargarte una versión para dispositivos android en el siguiente <a href="https://play.google.com/store/apps/details?id=appinventor.ai_fotovallegrafia.Cinematica&feature=more_from_developer#?t=W251bGwsMSwyLDEwMiwiYXBwaW52ZW50b3IuYWlfZm90b3ZhbGxlZ3JhZmlhLkNpbmVtYXRpY2EiXQ.." style="text-decoration:none" target="_blank">enlace</a> o visitar la página de desarrollo en <a href="http://fotovallegrafia.blogspot.com.es/p/aplicaciones-android-cinematica.html" style="text-decoration:none" target="_blank">fotovallegrafía</a> para más información.</p>
+	  <p style="text-align:justify; color:grey;">El botón <b><cite>¡Fuego!</cite></b> inicia el movimiento con los parámetros prefijados en el formulario. En cualquier momento puedes cambiar los valores numéricos de posición, velocidad y aceleración inicial en <b><cite>x</cite></b> y en <b><cite>y</cite></b> para simular lanzamientos diferentes. Puedes detener el objeto en cualquier momento mediante el botón <b><cite>Pausa</cite></b>.</p>
+	  <table style="border:1px solid black; margin: 0 auto; width:500px">
+	  	<tr>
+	  		<th style="text-align:right; color:grey">Posición x inicial:</th>
+	 			<th><input type="number" id="px0" placeholder="0" onclick="fpx0()" style="width:70px"></input></th>
+	 			<th style="text-align:right; color:grey">Posición y inicial:</th>
+  			<th><input type="number" id="py0" placeholder="400" onclick="fpy0()" style="width:70px"></input></th>
+	  	</tr>
+	 		<tr>
+	 			<th style="text-align:right; color:grey">Velocidad x inicial:</th>
+  			<th><input type="number" id="vx0" placeholder="25" onclick="fvx0()" style="width:70px"></input></th>
+	  		<th style="text-align:right; color:grey">Velocidad y inicial:</th>
+	  		<th><input type="number" id="vy0" placeholder="-75" onclick="fvy0()" style="width:70px"></input></th>
+	 		</tr>
+	 		<tr>
+	  		<th style="text-align:right; color:grey">Aceleración x inicial:</th>
+	 			<th><input type="number" id="ax0" placeholder="0" onclick="fax0()" style="width:70px"></input></th>
+	 			<th style="text-align:right; color:grey">Aceleración y inicial:</th>
+  			<th><input type="number" id="ay0" placeholder="9,81" onclick="fay0()" style="width:70px"></input></th>
+	  	</tr>
+	 	</table>
+		<p>
+		<table style="border:1px solid black; margin: 0 auto; width:500px">
+			<tr>
+				<th><button onclick="ffuego()" style="width:240px">¡Fuego!</button></th>
+				<th><button onclick="fpausa()" style="width:240px">Pausa</button></th>
+			</tr>
+		</table>
+		<p>
+	</body>
+</html>

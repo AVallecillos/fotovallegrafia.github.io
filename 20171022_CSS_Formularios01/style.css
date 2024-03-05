@@ -1,0 +1,40 @@
+body{
+	background-color: gold;
+	font-family: sans-serif;
+	text-align: center;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+p{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+div{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.uno{
+	background-color: orange;
+	color: #FFFFFF;
+	font-size: 10pt;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.canvas1{
+	margin: 0px;
+	margin-bottom: -4px;
+	border: 0px;
+	padding: 0px;
+}
+
+input{
+	width: 50px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<head>
+		<title>Ejemplo modo pantalla completa</title>
+		<script language="javascript">
+			function launchFullScreen(element) {
+			  if(element.requestFullScreen) {
+				element.requestFullScreen();
+			  } else if(element.mozRequestFullScreen) {
+				element.mozRequestFullScreen();
+			  } else if(element.webkitRequestFullScreen) {
+				element.webkitRequestFullScreen();
+			  }
+			}
+			launchFullScreen(document.documentElement); // la página entera
+			launchFullScreen(document.getElementById("id del elemento")); // cualquier elemento individual
+			
+		</script>
+	</head>
+
+	<body>
+		<h1 id="hola">Hello World!</h1>
+		<br>
+		<input type="button" value="Modo pantalla completa" onclick="launchFullScreen(document.documentElement);"/>
+		<br>
+		<br>
+		<input type="button" value="Elemento a pantalla completa" onclick="launchFullScreen(document.getElementById("hola"));"/>
+	</body>
+</html>

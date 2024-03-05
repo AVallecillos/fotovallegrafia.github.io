@@ -1,0 +1,102 @@
+﻿<doctype html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8" />
+	<title>Título</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		.centrar{
+		text-align: center;
+		}
+		.centrar * {
+		margin: 0 auto;
+		}
+	</style>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+
+<body>
+
+<!--Página 01: Principal-->
+	<div data-role="page" id="pagina01">
+		<div data-role="header">
+			<h1>COMPRA DE LA SEMANA</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#pagina02" data-transition="slide">Alimentación</a></li>
+				<li><a href="#pagina03" data-transition="slide">Lácteos</a></li>
+				<li>Congelados</li>
+				<li>Bebidas</li>
+				<li>Frecos</li>
+				<li>Bebés</li>
+				<li>Higiene Personal</li>
+				<li>Limpieza y Hogar</li>
+			</ul>
+			<div class="centrar">
+			<a href="#pagina99" data-role="button" data-inline="true" data-icon="check">Ver mi lista de la compra</a>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; 2016 Antonio Vallecillos - @fotovallegrafia</h4>
+		</div>
+	</div>
+
+<!--Página 02-->
+	<div data-role="page" id="pagina02" data-add-back-btn="true" data-back-btn-text="Atrás" data-back-btn-theme="a">
+		<div data-role="header">
+			<h1>COMPRA DE LA SEMANA</h1>
+			<h2>ALIMENTACIÓN</h2>
+		</div>
+		<div data-role="content">
+			<p>Alimentación</p>
+			<div class="centrar">
+			<a href="#pagina99" data-role="button" data-inline="true" data-icon="check">Ver mi lista de la compra</a>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; 2016 Antonio Vallecillos - @fotovallegrafia</h4>
+		</div>
+	</div>
+
+<!--Página 03-->
+	<div data-role="page" id="pagina03" data-add-back-btn="true" data-back-btn-text="Atrás" data-back-btn-theme="a">
+		<div data-role="header">
+			<h1>COMPRA DE LA SEMANA</h1>
+			<h2>LÁCTEOS</h2>
+		</div>
+		<div data-role="content">
+			<p>Alimentación</p>
+			<div class="centrar">
+			<a href="#pagina99" data-role="button" data-inline="true" data-icon="check">Ver mi lista de la compra</a>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; 2016 Antonio Vallecillos - @fotovallegrafia</h4>
+		</div>
+	</div>
+
+<!--Página 99-->
+	<div data-role="page" id="pagina99" data-add-back-btn="true" data-back-btn-text="Atrás" data-back-btn-theme="a">
+		<div data-role="header">
+			<h1>COMPRA DE LA SEMANA</h1>
+			<h2>MI LISTA DE LA COMPRA</h2>
+		</div>
+		<div data-role="content">
+			<p>Mi lista de la compra</p>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; 2016 Antonio Vallecillos - @fotovallegrafia</h4>
+		</div>
+	</div>
+</body>
+
+</html>

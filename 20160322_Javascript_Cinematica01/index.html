@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cinemática</title>
+		<!--
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+		-->
+	</head>
+	
+	<body link="black" style="font-family:sans-serif; font-size:15px; width:600px; margin-left:auto; margin-right:auto; background-color:white">
+		<h1 style="font-size:24px; text-align:center; color:grey;">CINEMÁTICA</h1>
+		<p style="text-align:justify; color:grey;"> Cinemática es una aplicación orientada al estudio del movimiento de un objeto en lanzamiento libre. Puedes descargarte una versión para dispositivos android en el siguiente <a href="https://play.google.com/store/apps/details?id=appinventor.ai_fotovallegrafia.Cinematica&feature=more_from_developer#?t=W251bGwsMSwyLDEwMiwiYXBwaW52ZW50b3IuYWlfZm90b3ZhbGxlZ3JhZmlhLkNpbmVtYXRpY2EiXQ.." style="text-decoration:none">enlace</a> o visitar la página de desarrollo en <a href="http://fotovallegrafia.blogspot.com.es/p/aplicaciones-android-cinematica.html" style="text-decoration:none">fotovallegrafía</a> para más información.</p>
+		<div style="margin-left:auto; margin-right:auto; text-align:center; position:relative;">
+			<img src="images/IsaacNewtonB05.jpg" width="500" height="500" style="position:absolute;">
+			<canvas id="miCanvas" width="500" height="500" style="position:relative;">
+				Canvas no soportado; por favor actualiza tu navegador.
+			</canvas>
+			
+			<br>
+			<br>
+			<input type="button" value="¡Fuego!" onclick="fuego();">
+			<input type="button" value="Pausa" onclick="pausa();">
+			<input type="button" value="Atrás" onClick="location.href='../index.html'">
+
+		</div>
+		
+		<script>
+			var miCanvas = document.getElementById("miCanvas");
+			var miContexto = miCanvas.getContext("2d");
+			
+			var t = 0;
+			var x;
+			var y;
+			var x0 = 50;
+			var y0 = 500;
+			var vx0 = 2;
+			var vy0 = -9.8;
+			var ax0 = 0;
+			var ay0 = 9.81/100;
+			
+			var imagen = new Image();
+			imagen.onload = function(){
+				miContexto.drawImage(imagen,100,100);
+			}
+			
+			imagen.src = "images/AppleA01.gif";
+			
+			function drawProyectile(){
+				miContexto.clearRect(0, 0, miCanvas.width, miCanvas.height);
+				//miContexto.beginPath();
+				//miContexto.arc(x, y, 5, 0, 2*Math.PI);
+				//miContexto.fillStyle = "orange";
+				//miContexto.fill();
+				miContexto.drawImage(imagen,x-10,y-10,20,20);
+			}
+
+			function moveProyectile(){
+				window.setTimeout(moveProyectile, 1000/30);
+				drawProyectile();
+				t = t + 1;
+				if (y >= 501){
+					t = 0;
+					x = x0;
+					y = y0;
+				}
+				else {
+					x = ax0 * t * t / 2 + vx0 * t + x0;
+					y = ay0 * t * t / 2 + vy0 * t + y0;
+				}
+			}
+			
+			function fuego (){
+				t = 0;
+				x = x0;
+				y = y0;
+			}
+            
+			moveProyectile();
+			imagen();
+		</script>
+	<footer>
+		<h4 style="text-align:center; color:grey;">&copy; 2016 Antonio Vallecillos - <a href="https://twitter.com/fotovallegrafia" style="text-decoration:none">@fotovallegrafia</a></h4>
+	</footer>
+	</body>
+</html>

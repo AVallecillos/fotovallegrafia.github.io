@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Básico</title>
+	
+	<style>
+		#miCanvas
+		{
+			border:dotted 2px blue;
+			background:cyan;
+		}
+	</style>
+	
+	<script>
+	window.onload = function(){
+		var canvas = document.getElementById("miCanvas");
+		if(canvas&&canvas.getContext){
+			var ctx = canvas.getContext("2d");
+			if(ctx){
+				canvas.onmousedown = function(e){
+					var posCanvas = canvas.getBoundingClientRect();
+					var x = e.clientX - posCanvas.left;
+					var y = e.clientY - posCanvas.top;
+					alert("izq "+posCanvas.left+"\n"+
+					//der "+posCanvas.right+"\n"+
+					//top "+posCanvas.top+"\n"+
+					//bot "+posCanvas.bottom+"\n"+
+					//width "+posCanvas.width+"\n"+
+					//height "+posCanvas.height+"\n"+
+					//width "+canvas.width+"\n"+
+					//height "+canvas.height+"\n"+
+					//"x "+x+"\n"+
+					//"y "+y+"\n"+
+					//"xx "+e.clientX+"\n"+
+					//"yy "+e.clientY
+					);
+				}
+			}else{
+				alert("Error al crear tu contexto");
+			}
+		}
+	}		
+	</script>
+</head>
+
+<body>
+	<h1 align="center">Conceptos básicos de CANVAS</h1>
+	<canvas id="miCanvas" width="800px" height="400px">
+	Tu navegador no soporta CANVAS
+	</canvas>
+</body>
+
+</html>

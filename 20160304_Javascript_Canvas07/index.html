@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Básico</title>
+	
+	<style>
+		#miCanvas
+		{
+			border:solid 5px blue;
+			background:cyan;
+		}
+	</style>
+	
+	<script>
+	var ctx;
+	var radio = 10;
+	var bolax = 50;
+	var bolay = 100;
+	window.onload = function(){
+		var canvas = document.getElementById("miCanvas");
+		if(canvas&&canvas.getContext){
+			ctx = canvas.getContext("2d");
+			if(ctx){
+				ctx.lineWidth = radio;
+				ctx.fillStyle = "red";
+				mueve();
+				setInterval(mueve,100);
+			}else{
+				alert("Error al crear tu contexto");
+			}
+		}
+	}
+	function mueve(){
+		bolax += 4;
+		ctx.beginPath();
+		ctx.arc(bolax, bolay, radio, 0, 2*Math.PI, true);
+		ctx.fill();
+	}
+	</script>
+</head>
+
+<body>
+	<h1 align="center">Capítulo 02 - Animación con el canvas de HTML5</h1>
+	<canvas id="miCanvas" width="500px" height="300px">
+	Tu navegador no soporta CANVAS
+	</canvas>
+</body>
+
+</html>
